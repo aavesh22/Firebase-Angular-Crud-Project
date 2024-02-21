@@ -1,0 +1,54 @@
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: #343a40 !important;
+}
+
+.navbar-brand {
+    color: #ffffff !important;
+}
+
+.navbar-custom {
+    padding: 10px 20px; 
+    font-size: 20px; 
+}
+.btn-back {
+    margin-top: 20px;
+}
+
+.file-upload-section {
+    margin-top: 50px;
+}
+
+.card-body {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.progress {
+    height: 30px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    border-radius: 10px;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.btn-download {
+    margin-right: 10px;
+}
+
+.btn-delete {
+    margin-right: 10px;
+}
+.text-right {
+    margin-top: -8px;
+}

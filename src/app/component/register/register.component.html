@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="right-block">
+            <div class="main-logo">
+                <a href="#">
+                    <img src="../../../assets/Clover_Logo.png" height="5%" width="12%" alt="" />
+                </a>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form [formGroup]="registerForm" (ngSubmit)="register()">
+                            <div class="mb-3">
+                                <h4 class="text-dark text-muted">Register</h4>
+                            </div>
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" formControlName="firstName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" formControlName="lastName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" formControlName="email">
+                                <div *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched"
+                                    class="text-danger">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" formControlName="password">
+                                <div *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched"
+                                    class="text-danger">
+                                    Password must be at least 8 characters long.
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-12 text-center">
+                                    <button type="submit" class="btn btn-info btn-block">Register</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <a href="/login" style="text-decoration: none;">Have an account ? <span
+                                            class="text-danger">Login</span></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

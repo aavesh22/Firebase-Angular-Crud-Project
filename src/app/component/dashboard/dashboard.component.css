@@ -1,0 +1,85 @@
+
+body {
+    background-color: #f8f9fa;
+}
+
+.container-fluid {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand {
+    color: #ffffff;
+    margin-right: auto;
+}
+
+.navbar-custom {
+    padding: 15px 20px; 
+    font-size: 20px; 
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+    border-radius: 4px;
+    box-shadow: none;
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 0.8rem;
+    color: #dc3545;
+}
+
+.table {
+    border-radius: 4px;
+}
+
+th,
+td {
+    padding: 0.8rem 1.5rem;
+}
+
+.text-warning {
+    color: #f80;
+}
+
+.text-danger {
+    color: #dc3545;
+}
+
+.btn-outline-primary {
+    background-color: #fff;
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.btn-outline-primary:hover {
+    background-color: #f0f2f5;
+    color: #007bff;
+}
+
+.btn-outline-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #212529;
+}
+
+.btn-outline-warning:hover {
+    background-color: #ffcd39;
+    border-color: #ffcd39;
+    color: #212529;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}

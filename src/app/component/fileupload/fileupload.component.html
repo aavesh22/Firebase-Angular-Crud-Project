@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark navbar-custom">
+    <a class="navbar-brand" href="#">File Upload</a>
+    <div class="text-right">
+      <button class="btn btn-primary btn-back" (click)="goToDashboard()">Back to Dashboard</button>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row file-upload-section">
+      <div class="col-md-4">
+        <div class="card border-0 shadow">
+          <div class="card-body">
+            <div>
+              <input type="file" class="text-nowrap text-truncate file" (change)="selectFile($event)">
+              <button type="button" class="btn btn-outline-warning" [disabled]="!selectedFiles"
+                (click)="uploadFile()">Upload</button>
+            </div>
+
+            <div class="progress">
+              <div class="progress-bar progress-bar-info" role="progressbar" attr.aria-valuenow="{{percentage}}"
+                aria-valuemin="0" aria-valuemax="100" [ngStyle]="{ width: percentage + '%' }">
+                {{percentage}}%
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-8 file-list-section">
+
+
+        <div class="mb-3 mt-3">
+          <h4 class="text-primary">File list</h4>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">File name</th>
+              <th scope="col">File size</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let file of listOfFiles">
+              <th>{{file.name}}</th>
+              <td>{{file.size}}</td>
+              <td>
+                <a href="{{file.url}}" class="btn btn-outline-info btn-download" type="button" download
+                  target="_blank">Download</a>
+                <a class="btn btn-outline-danger btn-delete" type="button" (click)="deleteFile(file)">Delete</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
